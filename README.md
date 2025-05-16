@@ -1,4 +1,4 @@
-**Submitted by:** Adil Kasim (directory id: akasim)
+**Submitted by:** Adil Kasim (directory id: akasim)\n
 **Group Members:** N/A
 **App Description:** Portfolio Website, basic funtionality that satisfies all requirments. Work In Progress.
 **YouTube Video Link:** https://www.youtube.com/MyAmazingAPP
