@@ -1,0 +1,69 @@
+:root {
+    --lightModeTxt: #000000;
+    --lightModeBgd: #FFFFFF;
+    --lightModePri: #DAA520;
+    --lightModeSec: #2B50C8;
+    --lightModeAcc: #5BA8FF;
+
+    --darkModeTxt: #EAE9FC;
+    --darkModeBgd: #000000;
+    --darkModePri: #2356ff;
+    --darkModeSec: #f2c044;
+    --darkModeAcc: #a0e4ff;
+}
+
+/* -----==========----- Light mode -----==========----- */
+@media (prefers-color-scheme: light) {
+    fieldset {
+        border-color: var(--lightModeAcc);
+    }
+}
+
+
+/* -----==========----- Dark mode -----==========----- */
+@media (prefers-color-scheme: dark) {
+    fieldset {
+        border-color: var(--darkModeAcc);
+    }
+}
+
+fieldset {
+    border-style: double;
+    border-radius: 5px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+
+    flex-wrap: wrap;
+}
+
+.leftElement {
+    width: 50%;
+
+    flex: 1;
+}
+
+.rightElement {
+    position: sticky;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    padding-bottom: 20%;
+    
+    flex: 1;
+}
+
+.inlineElement {
+    display: inline;
+}
+
+.blockElement {
+    display: block;
+    margin-top: 1%;
+    margin-bottom: 2%;
+}

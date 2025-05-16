@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 126">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ff7f00;
+      }
+
+      .cls-2 {
+        fill: #009eff;
+      }
+    </style>
+  </defs>
+  <g>
+    <polygon class="cls-1" points=".5 .5 42.97 .5 .5 54.55 .5 .5"/>
+    <path d="m41.94,1L1,53.11V1h40.94m2.06-1H0v56L44,0h0Z"/>
+  </g>
+  <g>
+    <polygon class="cls-2" points="35.06 55.5 79.5 1.4 79.5 55.5 35.06 55.5"/>
+    <path d="m79,2.79v52.21h-42.88L79,2.79m1-2.79l-46,56h46V0h0Z"/>
+  </g>
+  <g>
+    <polygon class="cls-1" points="17.33 125.5 79.5 71.1 79.5 125.5 17.33 125.5"/>
+    <path d="m79,72.2v52.8H18.66l60.34-52.8m1-2.2L16,126h64v-56h0Z"/>
+  </g>
+  <g>
+    <polygon class="cls-2" points=".5 70.5 29.17 70.5 .5 124.01 .5 70.5"/>
+    <path d="m28.33,71L1,122.02v-51.02h27.33m1.67-1H0v56l30-56h0Z"/>
+  </g>
+</svg>

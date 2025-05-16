@@ -1,0 +1,62 @@
+:root {
+    --lightModeTxt: #000000;
+    --lightModeBgd: #FFFFFF;
+    --lightModePri: #DAA520;
+    --lightModeSec: #2B50C8;
+    --lightModeAcc: #5BA8FF;
+
+    --darkModeTxt: #EAE9FC;
+    --darkModeBgd: #000000;
+    --darkModePri: #2356ff;
+    --darkModeSec: #f2c044;
+    --darkModeAcc: #a0e4ff;
+}
+
+body {
+    font-family: "Electrolize", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: var(--darkModeTxt);
+}
+
+a:visited {
+    color: var(--darkModeAcc);
+}
+
+a:hover {
+    color: var(--darkModeTxt);
+}
+
+a:active {
+    color: var(--darkModeTxt);
+}
+
+h1, h2, h3 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* -----==========----- Light mode -----==========----- */
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: var(--lightModeBgd);
+        color: var(--lightModeTxt);
+    }
+}
+
+
+/* -----==========----- Dark mode -----==========----- */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--darkModeBgd);
+        color: var(--darkModeTxt);
+    }
+}
+

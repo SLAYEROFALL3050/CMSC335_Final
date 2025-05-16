@@ -1,0 +1,70 @@
+{
+  "projects": [
+    {
+      "name": "Modular Bike",
+      "version": 1,
+      "id": 1,
+      "desc": "Modular bike frame that can grow and shrink to fit the rider",
+      "tags": [
+        "modular",
+        "grow",
+        "shrink",
+        "customizable"
+      ],
+      "imgLink": "https://placehold.co/350x600/orange/white"
+    },
+    {
+      "name": "Drawstring Tensioner",
+      "version": 2,
+      "id": 2,
+      "desc": "Tensioner to properly hold a drawstring backpack",
+      "tags": [
+        "convenience",
+        "small",
+        "lightweight",
+        "useful"
+      ],
+      "imgLink": "https://placehold.co/350x600/orange/white"
+    },
+    {
+      "name": "Sheet Stand",
+      "version": 2,
+      "id": 3,
+      "desc": "Stand that can be expanded and shrunk to hold runners and sheets",
+      "tags": [
+        "modular",
+        "useful",
+        "runner stand",
+        "holder"
+      ],
+      "imgLink": "https://placehold.co/350x600/orange/white"
+    },
+    {
+      "name": "RX-78-2 Light Kit",
+      "version": 1,
+      "id": 4,
+      "desc": "Light kit for the PGU RX-78-2 gundam",
+      "tags": [
+        "wireless",
+        "RGB",
+        "gundam",
+        "rx-78-2"
+      ],
+      "imgLink": "https://placehold.co/350x600/orange/white"
+    },
+    {
+      "name": "Ornithopter",
+      "version": 1,
+      "id": 5,
+      "desc": "Ornithopter with full function wings for accurate bird flight",
+      "tags": [
+        "bird",
+        "drone",
+        "ornithopter",
+        "wings",
+        "camera"
+      ],
+      "imgLink": "https://placehold.co/350x600/orange/white"
+    }
+  ]
+}

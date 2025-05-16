@@ -1,0 +1,104 @@
+:root {
+    --lightModeTxt: #000000;
+    --lightModeBgd: #FFFFFF;
+    --lightModePri: #DAA520;
+    --lightModeSec: #2B50C8;
+    --lightModeAcc: #5BA8FF;
+
+    --darkModeTxt: #EAE9FC;
+    --darkModeBgd: #000000;
+    --darkModePri: #2356ff;
+    --darkModeSec: #f2c044;
+    --darkModeAcc: #a0e4ff;
+
+    --transitionTime: 0.2s;
+}
+
+
+.nav {
+    position: fixed;
+    bottom: 1%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navBar {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+}
+
+.navItem {
+    margin: 0 5% 0;
+}
+
+.navLink {
+
+}
+
+.navName {
+    text-align: center;
+    visibility: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+.navIcon {
+    height: auto;
+    max-width: 40px;
+    width: 100%;
+
+    border: 2px solid var(--darkModeAcc);
+    background-color: var(--darkModeBgd);
+    border-radius: 5px;
+}
+
+.current {
+    transform: translateY(-15px);
+}
+
+.navItem:hover {
+    -webkit-transition: all var(--transitionTime) ease;
+    -moz-transition: all var(--transitionTime) ease;
+    -ms-transition: all var(--transitionTime) ease;
+    -o-transition: all var(--transitionTime) ease;
+
+    transition: all var(--transitionTime) ease;
+    transform: translateY(-10px);
+}
+
+.navItem:hover .navName {
+    visibility: visible;
+}
+
+/*
+<footer class="nav">
+    <div class="navBar">
+        <div class="navItem">
+            <a class="navLink" href="/index">
+                <p class="navName">Home</p>
+                <img src="images/icon_home.svg" alt="home page icon" class="navIcon">
+            </a>
+        </div>
+        <div class="navItem">
+            <a class="navLink" href="/index">
+                <p class="navName">About</p>
+                <img src="images/icon_about.svg" alt="about page icon" class="navIcon">
+            </a>
+        </div>
+        <div class="navItem">
+            <a class="navLink" href="/index">
+                <p class="navName">Products</p>
+                <img src="images/icon_prod.svg" alt="products page icon" class="navIcon">
+            </a>
+        </div>
+        <div class="navItem">
+            <a class="navLink" href="/index">
+                <p class="navName">Projects</p>
+                <img src="images/icon_proj.svg" alt="projects page icon" class="navIcon">
+            </a>
+        </div>
+    </div>
+</footer>
+*/

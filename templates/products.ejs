@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+
+    <link rel="stylesheet" href="/css/styles.css" type="text/css">
+    <link rel="stylesheet" href="/css/procts.css" type="text/css">
+    <link rel="stylesheet" href="/css/footer.css" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Electrolize&family=Fira+Code:wght@300..700&display=swap">
+</head>
+<body>
+    <h1>Products</h1>
+
+    <div class="container">
+        <%- products %> <!-- Elements Go Here -->
+    </div>
+
+    <footer class="nav">
+    <div class="navBar">
+        <div class="navItem">
+            <a class="navLink" href="/">
+                <p class="navName">Home</p>
+                <img src="/images/icon_home.svg" alt="home page icon" class="navIcon">
+            </a>
+        </div>
+        <div class="navItem">
+            <a class="navLink" href="/about">
+                <p class="navName">About</p>
+                <img src="/images/icon_about.svg" alt="about page icon" class="navIcon">
+            </a>
+        </div>
+        <div class="navItem current">
+            <a class="navLink" href="/products">
+                <p class="navName">Products</p>
+                <img src="/images/icon_prod.svg" alt="products page icon" class="navIcon">
+            </a>
+        </div>
+        <div class="navItem">
+            <a class="navLink" href="/projects">
+                <p class="navName">Projects</p>
+                <img src="/images/icon_proj.svg" alt="projects page icon" class="navIcon">
+            </a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

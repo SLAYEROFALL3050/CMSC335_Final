@@ -1,0 +1,99 @@
+:root {
+    --lightModeTxt: #000000;
+    --lightModeBgd: #FFFFFF;
+    --lightModePri: #DAA520;
+    --lightModeSec: #2B50C8;
+    --lightModeAcc: #5BA8FF;
+
+    --darkModeTxt: #EAE9FC;
+    --darkModeBgd: #000000;
+    --darkModePri: #2356ff;
+    --darkModeSec: #f2c044;
+    --darkModeAcc: #a0e4ff;
+}
+/* CONTAINER FOR CARDS */
+.container {
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+
+    flex-wrap: wrap;
+
+    width: 90%;
+}
+
+.container > .proctCard {
+    margin-top: 2%;
+}
+
+/* CARD SPECIFIC */
+.cardContent {
+    transition: 0.5s;
+    transform-style: preserve-3d;
+
+    display: grid;
+    grid-template: 1fr / 1fr;
+    place-items: center;
+}
+
+/* .cardContent > .cardFront + .cardBack {
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+} */
+
+.proctCard:hover .cardContent {
+    transition: transform 0.5s;
+    transform: scale(1.1);
+}
+
+.proctCard:hover .cardContent .cardTitle {
+    transition: 0.5s;
+    text-shadow: 0px 15px 5px #000000;
+}
+
+.proctCard:hover .cardContent .cardPrice {
+    transition: 0.5s;
+    text-shadow: 0px 15px 5px #000000;
+}
+
+.cardTitle {
+    transition: 0.5s;
+    font-size: x-large;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    text-shadow: 0px 5px 15px #000000;
+}
+
+.cardPrice {
+    font-size: larger;
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+
+    text-shadow: 0px 5px 15px #000000;
+}
+
+/*
+<div class="proctCard">
+    <div class="cardContent">
+        <div class="cardFront">
+            <a class="cardLink" href="http://localhost:${portNum}/products/${product.id}">
+                <h3 class="cardTitle">${project.name}</h3>
+                <img class="cardImage" src="${project.imgLink}" alt="image of ${project.name}">
+                <p class="cardPrice">$${product.price.toFixed(2)}</p>
+            </a>
+        </div>
+        <div class="cardBack">
+            <img class="cardBackImage" src="/images/products.svg" alt="products back Design">
+        </div>
+    </div>
+</div>
+*/

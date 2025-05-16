@@ -1,0 +1,121 @@
+/* -----===============----- Variables -----===============----- */
+:root {
+    --animationDelay: 0.2s;
+    --cardWidthMax: 450px;
+    --cardWidthMin: 200px;
+    --cardHover: 20px;
+    --cardUp: 10px;
+    --cardTranslate: 150px;
+    --cardRotate: 20deg;
+
+    --lightModeTxt: #000000;
+    --lightModeBgd: #FFFFFF;
+    --lightModePri: #DAA520;
+    --lightModeSec: #2B50C8;
+    --lightModeAcc: #5BA8FF;
+
+    --darkModeTxt: #EAE9FC;
+    --darkModeBgd: #000000;
+    --darkModePri: #2356ff;
+    --darkModeSec: #f2c044;
+    --darkModeAcc: #a0e4ff;
+}
+
+/* -----===============----- Deck Specific -----===============----- */
+.deckContainer {
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.deck {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+
+/* -----===============----- Card Specific -----===============----- */
+/* Light mode */
+@media (prefers-color-scheme: light) {
+    .card {
+        border: 5px solid var(--lightModeAcc);
+        background-color: var(--lightModeBgd);
+    }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    .card {
+        border: 5px solid var(--darkModeAcc);
+        background-color: var(--darkModeBgd);
+    }
+}
+
+.card {
+    border-radius: 10px;
+
+    min-width: var(--cardWidthMin);
+    height: auto;
+
+    position: relative;
+}
+
+.cardName {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.hand {
+    margin: 0 auto;
+    position: absolute;
+    display: grid;
+    gap: 2%;
+    width: 100%;
+}
+
+.spread {
+    max-width: var(--cardWidthMax);
+    min-width: var(--cardWidthMin);
+    height: auto;
+    position: relative;
+}
+
+.spread > .card {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    -webkit-transition: all var(--animationDelay) ease;
+    -moz-transition:    all var(--animationDelay) ease;
+    -ms-transition:     all var(--animationDelay) ease;
+    -o-transition:      all var(--animationDelay) ease;
+    transition:         all var(--animationDelay) ease;
+}
+
+.spread:hover {
+    #about {
+        left: calc(var(--cardTranslate) * -1);
+        transform: rotate(calc(var(--cardRotate) * -1));
+    }
+
+    #projects {
+        left: var(--cardTranslate);
+        transform: rotate(var(--cardRotate));
+    }
+
+    #products {
+        transform: translateY(calc(var(--cardUp) * -1));
+    }
+}
+
+.spread > .card:hover {
+    top: calc(var(--cardHover) * -1);
+}
