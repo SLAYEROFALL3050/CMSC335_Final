@@ -18,7 +18,25 @@ router.get ("/", (request, response) => {
 });
 
 router.get ("/:product_id", (request, response) => {
-    response.send(`Make Product Page for product: ${request.params.product_id}`);
+    // request.params.product_id for specific product
+
+    let product = projectsData.find((id) => {
+        return id == request.params.product_id;
+    });
+
+    let { price } = productsData.find((id) => {
+        return id == request.params.product_id;
+    });
+
+    const vars = {
+        productTitle: `${product.name}`,
+        productImage: `${product.imgLink}`,
+        productAlt: `picture of ${product.name}`,
+        productPrice: `$${price.toFixed(2)}`,
+        productDesc: `${product.desc}`
+    };
+    
+    response.render("product", vars);
 });
 
 router.use((request, response) => {
