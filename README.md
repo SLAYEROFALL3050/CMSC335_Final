@@ -10,4 +10,4 @@
 
 **Contact Email:**  akasim@terpmail.umd.edu, adilskasim@gmail.com
 
-**Deployed App Link:** https://notreal.what.terpNel/myApp
+**Deployed App Link:** https://cmsc335-final-9iym.onrender.com
