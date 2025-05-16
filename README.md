@@ -6,7 +6,7 @@
 
 **YouTube Video Link:** https://www.youtube.com/MyAmazingAPP
 
-**APIs:** [OMDb] (https://www.omdbapi.com/)
+**APIs:** [OMDb](https://www.omdbapi.com/)
 
 **Contact Email:**  akasim@terpmail.umd.edu, adilskasim@gmail.com
 
