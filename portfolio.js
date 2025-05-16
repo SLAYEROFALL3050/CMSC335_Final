@@ -32,21 +32,22 @@ const client = new MongoClient(uri, {
     }
 });
 
-let portNumber = 5001; // Default port number
+const portNumber = process.env.PORT || 4000;
 
-// Get Port Number
-if (process.argv.length > 3 || process.argv.length < 2) {
-    console.log("Usage portfolio.js <PortNumber>");
-} else {
-    portNumber = parseInt(process.argv[2]);
+// // Get Port Number
+// if (process.argv.length > 3 || process.argv.length < 2) {
+//     console.log("Usage portfolio.js <PortNumber>");
+// } else {
+//     portNumber = parseInt(process.argv[2]);
 
-    if (isNaN(portNumber) == true) {
-        console.log("Invalid port number provided using 5001 as port");
-        portNumber = 5001; // Default to port 5001 since invalid port was given
-    }
-}
+//     if (isNaN(portNumber) == true) {
+//         console.log("Invalid port number provided using 5001 as port");
+//         portNumber = 5001; // Default to port 5001 since invalid port was given
+//     }
+// }
 
-console.log(`Web server is running at http://localhost:${portNumber}`);
+// console.log(`Web server is running at http://localhost:${portNumber}`);
+console.log(`Web server is running at port: ${portNumber}`);
 process.stdout.write('Type stop to shutdown the server: ');
 process.stdin.setEncoding("utf8");
 
