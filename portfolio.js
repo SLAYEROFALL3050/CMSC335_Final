@@ -16,8 +16,8 @@ app.use(express.static("./public"));
 // MongoDB
 const { MongoClient, ServerApiVersion } = require('mongodb');
 
-const databaseName = "CMSC335DB";
-const collectionName = "customers";
+const databaseName = process.env.MONGO_DB_NAME;
+const collectionName = process.env.MONGO_DB_COLLECTION;
 
 const user = process.env.MONGO_DB_USERNAME;
 const pass = process.env.MONGO_DB_PASSWORD;
