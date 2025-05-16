@@ -18,7 +18,18 @@ router.get ("/", (request, response) => {
 });
 
 router.get ("/:project_id", (request, response) => {
-    response.send(`Make Project Page for project: ${request.params.project_id}`);
+    let project = projectsData.projects.find((item) => {
+        return item.id == request.params.project_id;
+    });
+
+    const vars = {
+        projectTitle: `${project.name}`,
+        projectImage: `${project.imgLink}`,
+        projectAlt: `picture of ${project.name}`,
+        projectDesc: `${project.desc}`
+    };
+    
+    response.render("project", vars);
 });
 
 router.use((request, response) => {
@@ -34,7 +45,7 @@ function addProjects (portNum) {
 
     projectsData.projects.forEach((project) => {
         list += '<div class="proctCard">\n<div class="cardContent">\n<div class="cardFront">\n';
-        list += `<a class="cardLink" href="http://localhost:${portNum}/products/${project.id}">\n`;
+        list += `<a class="cardLink" href="/projects/${project.id}">\n`;
         list += `<h3 class="cardTitle">${project.name}</h3>\n`;
         list += `<img class="cardImage" src="${project.imgLink}" alt="image of ${project.name}">\n`;
         list += `</a>\n</div>\n<div class="cardBack">\n`;

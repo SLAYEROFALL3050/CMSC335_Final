@@ -18,22 +18,20 @@ router.get ("/", (request, response) => {
 });
 
 router.get ("/:product_id", (request, response) => {
-    // request.params.product_id for specific product
-
-    let product = projectsData.find((id) => {
-        return id == request.params.product_id;
+    let project = projectsData.projects.find((item) => {
+        return item.id == request.params.product_id;
     });
 
-    let { price } = productsData.find((id) => {
-        return id == request.params.product_id;
+    let { price } = productsData.products.find((item) => {
+        return item.id == request.params.product_id;
     });
 
     const vars = {
-        productTitle: `${product.name}`,
-        productImage: `${product.imgLink}`,
-        productAlt: `picture of ${product.name}`,
+        productTitle: `${project.name}`,
+        productImage: `${project.imgLink}`,
+        productAlt: `picture of ${project.name}`,
         productPrice: `$${price.toFixed(2)}`,
-        productDesc: `${product.desc}`
+        productDesc: `${project.desc}`
     };
     
     response.render("product", vars);
@@ -57,7 +55,7 @@ function addProducts (portNum) {
         });
 
         list += '<div class="proctCard">\n<div class="cardContent">\n<div class="cardFront">\n';
-        list += `<a class="cardLink" href="http://localhost:${portNum}/products/${product.id}">\n`;
+        list += `<a class="cardLink" href="/products/${product.id}">\n`;
         list += `<h3 class="cardTitle">${project.name}</h3>\n`;
         list += `<img class="cardImage" src="${project.imgLink}" alt="image of ${project.name}">\n`;
         list += `<p class="cardPrice">$${product.price.toFixed(2)}</p>\n`;
