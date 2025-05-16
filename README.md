@@ -1,6 +1,6 @@
 **Submitted by:** Adil Kasim (directory id: akasim)
 
-**Group Members:** Adil Kasim (directory id: akasim)
+**Group Members:** Adil Kasim (akasim)
 
 **App Description:** Portfolio Website, basic functionality that satisfies all requirements. Work In Progress. Will be used as my actual portfolio website, soon hopefully. This was the most useful class I have take at UMD so far. Thank you Nelson.
 
