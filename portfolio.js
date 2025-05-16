@@ -127,26 +127,26 @@ app.get("/about", async (request, response) => {
 
     const vars = {
         movies: moviesList,
-        formLinkAdd: `http://localhost:${portNumber}/aboutadd`,
-        formLinkGet: `http://localhost:${portNumber}/aboutget`
+        formLinkAdd: `/submitted`,
+        formLinkGet: `/comment`
     };
 
     response.render("about", vars);
 });
 
 app.use(bodyParser.urlencoded({extended: false}));
-app.post("/aboutadd", async (request, response) => {
+app.post("/submitted", async (request, response) => {
     let { firstName, lastName } = request.body;
     let { number, inEmail } = request.body;
     let { inComments } = request.body;
 
     addComment(firstName, lastName, number, inEmail, inComments);
 
-    response.send("Comment Saved");
+    response.render("submitted");
 });
 
 app.use(bodyParser.urlencoded({extended: false}));
-app.post("/aboutget", async (request, response) => {
+app.post("/comment", async (request, response) => {
     let { getEmail } = request.body;
 
     let user = await getComment(getEmail);
@@ -161,7 +161,11 @@ app.post("/aboutget", async (request, response) => {
         answer = comment;
     }
 
-    response.send(answer);
+    const vars = {
+        comment: answer
+    };
+
+    response.render("comment", vars);
 });
 
 //#endregion
